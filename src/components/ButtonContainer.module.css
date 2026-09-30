@@ -1,5 +1,17 @@
-.buttonContainer{
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Make = span two rows */
+.buttonContainer button[data-value="="] {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+}
+
+/* Make 0 span three columns */
+.buttonContainer button[data-value="0"] {
+  grid-column: 1 / span 3;
 }
